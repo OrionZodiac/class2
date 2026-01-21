@@ -1,6 +1,8 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_iot_second_app/UI/singin_ui.dart';
+import 'package:flutter_iot_second_app/UI/singup_ui.dart';
 
 class HomeUi extends StatelessWidget {
   const HomeUi({super.key});
@@ -32,14 +34,14 @@ class HomeUi extends StatelessWidget {
               style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: Colors.grey[500]),
+                  color: const Color.fromARGB(255, 0, 0, 0)),
             ),
             Text(
               'Put the creatvity on the development hihgway.',
               style: TextStyle(
                   fontSize: 15.00,
                   fontWeight: FontWeight.bold,
-                  color: Colors.grey[500]),
+                  color: const Color.fromARGB(255, 0, 0, 0)),
             ),
             SizedBox(
               height: 50,
@@ -48,7 +50,14 @@ class HomeUi extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SinginUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'Login',
                     style: TextStyle(
@@ -67,7 +76,14 @@ class HomeUi extends StatelessWidget {
                   width: 20,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SingupUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'Singup',
                     style: TextStyle(
